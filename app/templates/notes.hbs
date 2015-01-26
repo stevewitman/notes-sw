@@ -1,0 +1,36 @@
+  <section class="columns two">
+
+    <div class="column">
+      <div class="note-edit">
+        <p>
+          {{textarea placeholder="Add note title" value=noteTitle class="textarea-title"}}
+        </p>
+        {{textarea placeholder="Add note content" value=noteCopy class="textarea-copy"}}
+      </div>
+    </div>
+    <div class="column">
+      <div class="note-preview">
+        <p class="title">
+          {{noteTitle}}
+          <button {{action 'newNote'}} class="button-save">Save Note</button>
+        </p>
+        <p>
+          {{noteCopy}}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="columns two">
+      {{#each note in model}}
+        <div class="column">
+          <div class="note-show">
+            <!-- <button {{action 'newNote'}} class="button-delete">Delete Note</button> -->
+            <p class="title">{{note.title}}</p>
+
+            <p>{{note.body}}</p>
+          </div>
+        </div>
+      {{/each}}
+
+  </section>
