@@ -7,7 +7,7 @@
 html, body {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+  max-width: 1200px;
   font-family: "Open Sans";
   font-size: 16px;
   background: #222;
@@ -107,7 +107,7 @@ textarea {
   color: #EEE;
   border: 2px solid #777;
   float: right;
-  margin: 15px;
+  margin-top: 15px;
 }
 
 .button-delete {
@@ -116,7 +116,8 @@ textarea {
   color: #EEE;
   border: 2px solid #777;
   float: right;
-  margin: 30px;
+
+margin-top: 20px;
 }
 
 .title {
