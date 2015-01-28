@@ -10,19 +10,23 @@ export default Ember.ArrayController.extend({
         this.set('noteTitle', '');
         this.set('noteCopy', '');
         note.save();
-        this.flashMessage("", "Note was saved.");
+        this.flashMessage("success", "Note was saved.");
       } else if (!title.trim()) {
-        this.flashMessage("", "Title can't be blank.");
+        this.flashMessage("warning", "Title can't be blank.");
       } else {
-        this.flashMessage("", "Body can't be blank.");
+        this.flashMessage("warning", "Body can't be blank.");
       }
     },
+
     deleteNote: function(note_id) {
-      this.store.find('note', note_id).then((function(note) {
-        note.deleteRecord();
-        note.save();
-        this.flashMessage("", "Note was deleted.");
-      }).bind(this))
+      this.store.find('note', note_id).then(
+        function(note) {
+          note.deleteRecord();
+          note.save();
+          this.flashMessage("success", "Note was deleted.");
+        } .bind(this)
+      )
     },
+
   }
 });
