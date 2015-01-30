@@ -24,7 +24,7 @@ export default Ember.ArrayController.extend({
           note.destroyRecord();
           this.flashMessage("success", "Note was deleted.");
         }.bind(this)
-      )
+      );
     },
 
   }
