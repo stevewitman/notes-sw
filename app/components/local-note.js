@@ -5,13 +5,13 @@ export default Ember.Component.extend({
   classNames: ['note'],
 
   actions: {
-    deleteNote: function(id) {
-      this.sendAction('deleteNote', id);
+    deleteNote: function(note) {
+      this.sendAction('deleteNote', note);
     }
   }
 });
 
-// **************** Try this from Aaron on friday afternoon ****************  
+// **************** Try this from Aaron on friday afternoon ****************
 // export default Ember.Component.extend({
 //   tagName: 'article',
 //
